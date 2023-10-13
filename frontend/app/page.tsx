@@ -1,26 +1,28 @@
 'use client'
+
 import { useState } from 'react'
+
+import Header from '../components/Header'
+
 type ContainerProps = {
   children?: React.ReactNode
 }
 
 function Container({ children }: ContainerProps) {
-  return <div className="container">{children}</div>
-}
-
-function MenuBar() {
   return (
-    <nav>
-      <a href="/">Home</a>
-      <a href="/about">About</a>
-    </nav>
+    <div className="overflow-y-auto">
+      <Header />
+      <main className="flex-1 bg-blue-50 p-4">{children}</main>
+    </div>
   )
 }
 
 function Hero() {
   return (
     <section>
-      <h1 className="flex bg-sky-100 text-3xl font-bold">Home</h1>
+      <h1 className="flex bg-sky-100 text-3xl font-bold">
+        Sales Messages on Autopilot
+      </h1>
     </section>
   )
 }
@@ -93,7 +95,6 @@ export default function Page() {
 
   return (
     <Container>
-      <MenuBar />
       <Hero />
       <h2>
         Linkedin: {linkedInUrl} companyUrl {companyUrl} response {response}
