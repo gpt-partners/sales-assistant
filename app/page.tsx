@@ -1,16 +1,17 @@
-import { AddForm } from "@/app/AddForm";
+import { AddForm } from '@/app/add-form'
 export default function Home() {
   return (
-    <main className="mx-auto flex max-w-lg flex-col items-center justify-center px-5 py-6 text-center text-gray-800 md:px-10 md:py-20">
-      <h3 className="text-3xl font-semibold md:text-4xl">
-        Sales Messages on <span className="text-indigo-600">Autopilot</span>
-      </h3>
-      <p className="mt-3 leading-relaxed text-gray-500">
-        Generate personalized sales messages from LinkedIn profiles for any
-        company. Just input your website URL and watch your sales soar. Don't
-        miss out—Automate Your Sales Today!
-      </p>
-      <AddForm />
+    <main className="flex min-h-screen flex-col items-center justify-center bg-gray-100 px-4 py-2">
+      <div className="mx-auto max-w-lg text-gray-800">
+        <h3 className="py-3 text-3xl font-semibold md:py-5 md:text-4xl">
+          Sales Messages on <span className="text-indigo-600">Autopilot</span>
+        </h3>
+        <p className="mt-3 py-3 leading-relaxed text-gray-500 md:py-4">
+          Generate personalized sales messages from LinkedIn profiles for any company. Just input
+          your website URL and watch your sales soar. Don't miss out—Automate Your Sales Today!
+        </p>
+        <AddForm />
+      </div>
     </main>
-  );
+  )
 }

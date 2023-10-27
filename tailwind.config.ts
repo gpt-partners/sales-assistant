@@ -12,5 +12,6 @@ const config: Config = {
       fontFamily: { sans: ["Inter", ...defaultTheme.fontFamily.sans] },
     },
   },
+  plugins: [require("@tailwindcss/forms")],
 };
 export default config;
