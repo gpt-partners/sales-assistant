@@ -3,14 +3,14 @@
 import { createVito } from '@/app/actions'
 import { Errors, SubmitButton } from '@/components/form-helpers'
 import { ErrorValidator } from '@/utils/error-validator'
-import { experimental_useFormState } from 'react-dom'
+import { useFormState } from 'react-dom'
 
 const initialState = {
   message: null,
 }
 
 export function AddForm() {
-  const [state, formAction] = experimental_useFormState(createVito, initialState)
+  const [state, formAction] = useFormState(createVito, initialState)
   const validator = new ErrorValidator(state)
   return (
     <form action={formAction} className="mt-6 flex w-full flex-col items-center justify-center">
